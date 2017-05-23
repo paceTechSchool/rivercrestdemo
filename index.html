@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Rivercrest '17-'18 Flex Demo</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <style>
+      .form {
+      width: 250px;
+      margin: 10px;
+      }
+      #leftcontainer {
+      width: 270px;
+      height: 580px;
+      vertical-align: top;
+      border: 2px solid black;
+      display: inline-block;
+      }
+      #centercontainer {
+      width: 690px;
+      height: 630px;
+      vertical-align: top;
+      /*border: 1px solid black;*/
+      display: inline-block;
+      }
+      table {
+      border: 1px solid black;
+      width: 100%;
+      height: 100%;
+      }
+      td {
+      background-color: #D3D3D3;
+      }
+      .firsttwocolums {
+      background-color: white;
+      width: 40px;
+      text-align: center;
+      }
+      .tablerowtop {
+      width: 110px;
+      font-weight: bold;
+      text-align: center;
+      background-color: white;
+      }
+      #flight1colorkey {
+      background-color: #000ad6;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight2colorkey {
+      background-color: #f8ff30;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight3colorkey {
+      background-color: #4fff0a;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight4colorkey {
+      background-color: #7febff;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight5colorkey {
+      background-color: #79ad7b;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight6colorkey {
+      background-color: #ff8c00;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight7colorkey {
+      background-color: #fb38ff;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+      #flight8colorkey {
+      background-color: #ed0f00;
+      display: inline-block;
+      height: 12px;
+      width: 10px;
+      padding-left: 65px;
+      }
+  	</style>
+  </head>
+  <body>
+  <div id="wrapper">
+  <div id="leftcontainer">
+    <br />
+  <span style="margin-left: 25px;font-size: 20px;">Rivercrest '17-'18</span>
+  <form name="flight1" class="form">
+     <fieldset>
+      <legend>Flight 1</legend>
+    	<input type="radio" name="flight1option" onclick="flight13();">Stripe
+    	<input type="radio" name="flight1option" onclick="flight1ilt();">ILT
+      <div id="flight1colorkey"></div>
+    </fieldset>
+  </form>
+  <form class="form">
+   <fieldset>
+    <legend>Flight 2</legend>
+  	<input type="radio" name="flight2option" onclick="flight23();">3
+  	<input type="radio" name="flight2option" onclick="flight24();">4
+  	<input type="radio" name="flight2option" onclick="flight2ilt();">ILT
+    <div id="flight2colorkey"></div>
+    </fieldset>
+  </form>
+  	<form class="form">
+   <fieldset>
+    <legend>Flight 3</legend>
+  	<input type="radio" name="flight3option" onclick="flight33();">3
+  	<input type="radio" name="flight3option" onclick="flight34();">4
+  	<input type="radio" name="flight3option" onclick="flight3ilt();">ILT
+   <div id="flight3colorkey"></div>
+   </fieldset>
+  </form>
+  	<form class="form">
+   <fieldset>
+    <legend>Flight 4</legend>
+  	<input type="radio" name="flight4option" onclick="flight43();">3
+  	<input type="radio" name="flight4option" onclick="flight44();">4
+  	<input type="radio" name="flight4option" onclick="flight4ilt();">ILT
+   <div id="flight4colorkey"></div>
+   </fieldset>
+  </form>
+  	<form class="form">
+   <fieldset>
+    <legend>Flight 5</legend>
+  	<input type="radio" name="flight5option" onclick="flight53();">3
+  	<input type="radio" name="flight5option" onclick="flight54();">4
+  	<input type="radio" name="flight5option" onclick="flight5ilt();">ILT
+   <div id="flight5colorkey"></div>
+   </fieldset>
+  </form>
+  	<form class="form">
+   <fieldset>
+    <legend>Flight 6</legend>
+  	<input type="radio" name="flight6option" onclick="flight63();">3
+    <input type="radio" name="flight6option" onclick="flight64();">4
+  	<input type="radio" name="flight6option" onclick="flight6ilt();">ILT
+   <div id="flight6colorkey"></div>
+   </fieldset>
+  </form>
+  	<form class="form">
+   <fieldset>
+    <legend>Flight 7</legend>
+  	<input type="radio" name="flight7option" onclick="flight73();">3
+  	<input type="radio" name="flight7option" onclick="flight74();">4
+  	<input type="radio" name="flight7option" onclick="flight7ilt();">ILT
+   <div id="flight7colorkey"></div>
+   </fieldset>
+  </form>
+  	<form class="form">
+   <fieldset>
+    <legend>Flight 8</legend>
+  	<input type="radio" name="flight8option" onclick="flight83();">Stripe
+  	<input type="radio" name="flight8option" onclick="flight8ilt();">ILT
+   <div id="flight8colorkey"></div>
+   </fieldset>
+  </form>
+  	<!-- <form class="form">
+  		<fieldset>
+  		<legend>Lunch</legend>
+  			<input type="radio" name="lunchoption" onclick="lunchMS();">Lunch Jr</input>
+        <input type="radio" name="lunchoption" onclick="lunchHS();">Lunch HS</input>
+  		</fieldset>
+  </form> -->
+  <button style="margin-top: 20px;width: 271px; height: 60px;" onclick="printDiv('centercontainer')">Print</button>
+  </div>
+  <div id="centercontainer">
+  <table border="1" style="width:100%; height: 650px;">
+    <tr class="tablerowtop">
+  	<td class="firsttwocolums">Start</td><td class="firsttwocolums">Stop</td><td class="tablerowtop">Mon</td><td class="tablerowtop">Tues</td><td class="tablerowtop">Wed</td><td class="tablerowtop">Thur</td><td class="tablerowtop">Fri</td>
+    </tr>
+    <tr style="text-align: center;">
+      <td class="firsttwocolums">8:00</td><td class="firsttwocolums">8:20</td>
+      <td id="m1"></td>
+      <td id="t1"></td>
+      <td id="w1"></td>
+      <td id="th1"></td>
+      <td id="f1"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">8:25</td><td class="firsttwocolums">8:50</td>
+      <td id="m2"></td>
+      <td id="t2"></td>
+      <td id="w2"></td>
+      <td id="th2"></td>
+      <td id="f2"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">8:55</td><td class="firsttwocolums">9:20</td>
+      <td id="m3"></td>
+      <td id="t3"></td>
+      <td id="w3"></td>
+      <td id="th3"></td>
+      <td id="f3"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">9:25</td><td class="firsttwocolums">9:50</td>
+      <td id="m4"></td>
+      <td id="t4"></td>
+      <td id="w4"></td>
+      <td id="th4"></td>
+      <td id="f4"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">9:55</td><td class="firsttwocolums">10:20</td>
+      <td id="m5"></td>
+      <td id="t5"></td>
+      <td id="w5"></td>
+      <td id="th5"></td>
+      <td id="f5"></td>
+    </tr>
+    <tr style="text-align:center;">
+      <td class="firsttwocolums">10:25</td><td class="firsttwocolums">10:50</td>
+      <td id="m6"></td>
+      <td id="t6"></td>
+      <td id="w6"></td>
+      <td id="th6"></td>
+      <td id="f6"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">10:55</td><td class="firsttwocolums">11:20</td>
+      <td id="m7"></td>
+      <td id="t7"><center>Advisory</center></td>
+      <td id="w7"></td>
+      <td id="th7"><center>Advisory</center></td>
+      <td id="f7"></td>
+    </tr>
+    <tr>
+  	<td class="firsttwocolums">11:25</td><td class="firsttwocolums">11:50</td>
+    <td id="m8"><center>Lunch</center></td>
+    <td id="t8"><center>Lunch</center></td>
+    <td id="w8"></td>
+    <td id="th8"><center>Lunch</center></td>
+    <td id="f8"><center>Lunch</center></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">11:55</td><td class="firsttwocolums">12:20</td>
+      <td id="m9"></td>
+      <td id="t9"></td>
+      <td id="w9"><center>Lunch</center></td>
+      <td id="th9"></td>
+      <td id="f9"></td>
+    </tr>
+    <tr style="text-align:center;">
+      <td class="firsttwocolums">12:25</td><td class="firsttwocolums">12:50</td>
+      <td id="m10"></td>
+      <td id="t10"></td>
+      <td id="w10"></td>
+      <td id="th10"></td>
+      <td id="f10"></td>
+    </tr>
+    <tr style="text-align:center;">
+      <td class="firsttwocolums">12:55</td><td class="firsttwocolums">1:20</td>
+      <td id="m11"></td>
+      <td id="t11"></td>
+      <td id="w11"></td>
+      <td id="th11"></td>
+      <td id="f11"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">1:25</td><td class="firsttwocolums">1:50</td>
+      <td id="m12"></td>
+      <td id="t12"></td>
+      <td id="w12"></td>
+      <td id="th12"></td>
+      <td id="f12"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">1:55</td><td class="firsttwocolums">2:20</td>
+      <td id="m13"></td>
+      <td id="t13"></td>
+      <td id="w13"></td>
+      <td id="th13"></td>
+      <td id="f13"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">2:25</td><td class="firsttwocolums">2:50</td>
+      <td id="m14"></td>
+      <td id="t14"></td>
+      <td id="w14"></td>
+      <td id="th14"></td>
+      <td id="f14"></td>
+    </tr>
+    <tr>
+      <td class="firsttwocolums">2:55</td><td class="firsttwocolums">3:15</td>
+      <td id="m15"></td>
+      <td id="t15"></td>
+      <td id="w15"></td>
+      <td id="th15"></td>
+      <td id="f15"></td>
+    </tr>
+  </table>
+  </div>
+  </div>
+  </body>
+
+  <script>
+  var fb13 = ['m1','m2','t1','t2','w1','w2','th1','th2','f1','f2'];
+  var fb14 = ['m1','m2','t1','t2','w1','w2','th1','th2','f1','f2'];
+  //
+  var fb23 = ['m3','m4','w3','w4','w5','f3','f4'];
+  var fb24 = ['m3','m4','w4','w5','th6','f3','f4'];
+  //
+  var fb33 = ['m5','m6','t3','t4','th3','th4','th5'];
+  var fb34 = ['m5','m6','t3','t4','w8','th4','th5'];
+  //
+  var fb43 = ['t5','t6','w6','w7','f5','f6','f7'];
+  var fb44 = ['m7','t5','t6','w6','w7','f5','f6'];
+  //
+  var fb53 = ['m9','m10','m11','w12','w13','f12','f13'];
+  var fb54 = ['m10','m11','w12','w13','th9','f12','f13'];
+  //
+  var fb63 = ['m12','m13','t9','t10','th10','th11','th12'];
+  var fb64 = ['m12','m13','t9','t10','th11','th12','f9'];
+  //
+  var fb73 = ['t11','t12','t13','w10','w11','f10','f11'];
+  var fb74 = ['t12','t13','w10','w11','th13','f10','f11'];
+  //
+  var fb83 = ['m14','m15','t14','t15','w14','w15','th14','th15','f14','f15'];
+  var fb84 = ['m14','m15','t14','t15','w14','w15','th14','th15','f14','f15'];
+
+  function color(e,f){
+    document.getElementById(e).style.backgroundColor = f;
+  }
+
+  function flight13(){
+    for(i=0;i<fb13.length;i++){
+      color(fb13[i],'#000ad6');
+    }
+  }
+  function flight14(){
+    for(i=0;i<fb14.length;i++){
+      color(fb14[i],'#000ad6');
+    }
+  }
+  function flight1ilt(){
+    for(i=0;i<fb13.length;i++){
+      color(fb13[i],'#D3D3D3');
+    }
+    for(i=0;i<fb14.length;i++){
+      color(fb14[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight23(){
+    for(i=0;i<fb23.length;i++){
+      color(fb23[i],'#f8ff30');
+      color('th6','#D3D3D3')
+    }
+  }
+  function flight24(){
+    for(i=0;i<fb24.length;i++){
+      color(fb24[i],'#f8ff30');
+      color('w3','#D3D3D3')
+    }
+  }
+  function flight2ilt(){
+    for(i=0;i<fb23.length;i++){
+      color(fb23[i],'#D3D3D3');
+    }
+    for(i=0;i<fb24.length;i++){
+      color(fb24[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight33(){
+    for(i=0;i<fb33.length;i++){
+      color(fb33[i],'#4fff0a');
+      color('w8','#D3D3D3')
+    }
+  }
+  function flight34(){
+    for(i=0;i<fb34.length;i++){
+      color(fb34[i],'#4fff0a');
+      color('th3','#D3D3D3')
+    }
+  }
+  function flight3ilt(){
+    for(i=0;i<fb33.length;i++){
+      color(fb33[i],'#D3D3D3');
+    }
+    for(i=0;i<fb34.length;i++){
+      color(fb34[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight43(){
+    for(i=0;i<fb43.length;i++){
+      color(fb43[i],'#7febff');
+      color('m7','#D3D3D3')
+    }
+  }
+  function flight44(){
+    for(i=0;i<fb44.length;i++){
+      color(fb44[i],'#7febff');
+      color('f7','#D3D3D3')
+    }
+  }
+  function flight4ilt(){
+    for(i=0;i<fb43.length;i++){
+      color(fb43[i],'#D3D3D3');
+    }
+    for(i=0;i<fb44.length;i++){
+      color(fb44[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight53(){
+    for(i=0;i<fb53.length;i++){
+      color(fb53[i],'#79ad7b');
+      color('th9','#D3D3D3')
+    }
+  }
+  function flight54(){
+    for(i=0;i<fb54.length;i++){
+      color(fb54[i],'#79ad7b');
+      color('m9','#D3D3D3')
+    }
+  }
+  function flight5ilt(){
+    for(i=0;i<fb53.length;i++){
+      color(fb53[i],'#D3D3D3');
+    }
+    for(i=0;i<fb54.length;i++){
+      color(fb54[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight63(){
+    for(i=0;i<fb63.length;i++){
+      color(fb63[i],'#ff8c00');
+      color('f9','#D3D3D3')
+    }
+  }
+  function flight64(){
+    for(i=0;i<fb64.length;i++){
+      color(fb64[i],'#ff8c00');
+      color('th10','#D3D3D3')
+    }
+  }
+  function flight6ilt(){
+    for(i=0;i<fb63.length;i++){
+      color(fb63[i],'#D3D3D3');
+    }
+    for(i=0;i<fb64.length;i++){
+      color(fb64[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight73(){
+    for(i=0;i<fb73.length;i++){
+      color(fb73[i],'#fb38ff');
+      color('th13','#D3D3D3');
+    }
+  }
+  function flight74(){
+    for(i=0;i<fb74.length;i++){
+      color(fb74[i],'#fb38ff');
+      color('t11','#D3D3D3');
+    }
+  }
+  function flight7ilt(){
+    for(i=0;i<fb73.length;i++){
+      color(fb73[i],'#D3D3D3');
+    }
+    for(i=0;i<fb74.length;i++){
+      color(fb74[i],'#D3D3D3');
+    }
+  }
+  //
+  function flight83(){
+    for(i=0;i<fb83.length;i++){
+      color(fb83[i],'#ed0f00');
+    }
+  }
+  function flight84(){
+    for(i=0;i<fb84.length;i++){
+      color(fb84[i],'#ed0f00');
+    }
+  }
+  function flight8ilt(){
+    for(i=0;i<fb83.length;i++){
+      color(fb83[i],'#D3D3D3');
+    }
+    for(i=0;i<fb84.length;i++){
+      color(fb84[i],'#D3D3D3');
+    }
+  }
+  //
+  function lunchHS(){
+    document.getElementById('m10').innerHTML = "HS Advisory";
+    document.getElementById('t10').innerHTML = "HS Advisory";
+    document.getElementById('w10').innerHTML = "HS Advisory";
+    document.getElementById('th10').innerHTML = "HS Advisory";
+    document.getElementById('f10').innerHTML = "HS Advisory";
+    //
+    document.getElementById('m11').innerHTML = "HS Lunch";
+    document.getElementById('t11').innerHTML = "HS Lunch";
+    document.getElementById('w11').innerHTML = "HS Lunch";
+    document.getElementById('th11').innerHTML = "HS Lunch";
+    document.getElementById('f11').innerHTML = "HS Lunch";
+  }
+  function lunchMS(){
+    document.getElementById('m10').innerHTML = "Jr. Lunch";
+    document.getElementById('t10').innerHTML = "Jr. Lunch";
+    document.getElementById('w10').innerHTML = "Jr. Lunch";
+    document.getElementById('th10').innerHTML = "Jr. Lunch";
+    document.getElementById('f10').innerHTML = "Jr. Lunch";
+    //
+    document.getElementById('m11').innerHTML = "Jr. Advisory";
+    document.getElementById('t11').innerHTML = "Jr. Advisory";
+    document.getElementById('w11').innerHTML = "Jr. Advisory";
+    document.getElementById('th11').innerHTML = "Jr. Advisory";
+    document.getElementById('f11').innerHTML = "Jr. Advisory";
+  }
+  function printDiv(divName) {
+     	var printContents = document.getElementById(divName).innerHTML;
+    	var originalContents = document.body.innerHTML;
+
+  		document.body.innerHTML = printContents;
+
+       	window.print();
+
+       	document.body.innerHTML = originalContents;
+  	}
+  </script>
+</html>
